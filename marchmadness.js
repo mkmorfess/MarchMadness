@@ -38,6 +38,8 @@ $(document).ready(function() {
 
 	tableData.text(input[i])
 	$("#row-" + rowNumber).append(tableData)
+
+	
 	}
 
 	gameNumber++
