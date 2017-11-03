@@ -67,7 +67,6 @@ $("#submit").on("click", function() {
 
 	gameNumber++
 	rowNumber++
-}
 
 	$("#year").val("")
 	$("#location").val("")
@@ -75,6 +74,9 @@ $("#submit").on("click", function() {
 	$("#region-round").val("")
 	$("#stubs").val("")
 	$("#hometeam").val("")
+}
+
+	
 		 
 	});
 
