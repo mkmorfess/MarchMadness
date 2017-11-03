@@ -50,6 +50,12 @@ $("#submit").on("click", function() {
 
 	var input = [$("#year").val().trim(), $("#location").val().trim(), $("#venue").val().trim(), $("#region-round").val().trim(), $("#stubs").val().trim(), $("#hometeam").val().trim()]
 
+	if ($("#year").val() === "" || $("#location").val() === "" || $("#venue").val() === "" || $("#region-round").val() === "" || $("#stubs").val() === "" || $("#hometeam").val() === ""){
+
+	alert("Please fill out all required fields")
+}
+
+ else {
 	database.ref().push({
 		year: input[0],
 		location: input[1],
@@ -59,9 +65,8 @@ $("#submit").on("click", function() {
 		hometeam: input[5]
 	});
 
-	if ($("#year").val() === "" || $("#location").val() === "" || $("#venue").val() === "" || $("#region-round").val() === "" || $("#stubs").val() === "" || $("#hometeam").val() === ""){
-
-	alert("Please fill out all required fields")
+	gameNumber++
+	rowNumber++
 }
 
 	$("#year").val("")
@@ -70,13 +75,9 @@ $("#submit").on("click", function() {
 	$("#region-round").val("")
 	$("#stubs").val("")
 	$("#hometeam").val("")
-
-	gameNumber++
-	rowNumber++
 		 
 	});
 
-});
 
 $(".gameRows").off().on("click", function(){
 
@@ -98,5 +99,7 @@ $(".gameRows").off().on("click", function(){
 else {
 	return false;
 }
+
+});
 
 });
