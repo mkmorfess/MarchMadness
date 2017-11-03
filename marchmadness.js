@@ -39,6 +39,9 @@ $(document).ready(function() {
 	tableData.text(input[i])
 	$("#row-" + rowNumber).append(tableData)
 	}
+
+	gameNumber++
+	rowNumber++
 });
 
 $("#submit").on("click", function() {
