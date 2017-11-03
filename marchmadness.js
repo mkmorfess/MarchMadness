@@ -39,7 +39,7 @@ $(document).ready(function() {
 	tableData.text(input[i])
 	$("#row-" + rowNumber).append(tableData)
 
-	
+
 	}
 
 	gameNumber++
@@ -58,6 +58,11 @@ $("#submit").on("click", function() {
 		stubs: input[4],
 		hometeam: input[5]
 	});
+
+	if ($("#year").val() === "" || $("#location").val() === "" || $("#venue").val() === "" || $("#region-round").val() === "" || $("#stubs").val() === "" || $("#hometeam").val() === ""){
+
+	alert("Please fill out all required fields")
+}
 
 	$("#year").val("")
 	$("#location").val("")
