@@ -70,3 +70,26 @@ $("#submit").on("click", function() {
 	});
 
 });
+
+$(".gameRows").off().on("click", function(){
+
+	var remove = confirm("Do you want to remove?")
+
+	if(remove === true) {
+
+		$(this).remove()
+
+	database.ref().on("child_removed", function(key){
+
+		ref().remove(key)
+
+
+	});	
+	
+}
+
+else {
+	return false;
+}
+
+});

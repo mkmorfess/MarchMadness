@@ -1,0 +1,13 @@
+.jumbotron {
+	background: saddlebrown;
+}
+
+.header {
+	color: white;
+}
+
+.gameRows:hover {
+	background: lightgrey;
+}
+
+
